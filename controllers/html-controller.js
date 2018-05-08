@@ -27,8 +27,13 @@ module.exports = function (app) {
   app.get("/profile", function (req, res) {
     res.render("profile");
   });
+  //route to post layout
   app.get("/post", function (req, res) {
     res.render("post");
+  });
+  //route to browse page
+  app.get("/browse", function (req, res) {
+    res.render("browse");
   });
 
 };
