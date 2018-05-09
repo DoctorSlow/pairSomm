@@ -6,17 +6,17 @@
   {{#each cats}} {{#unless sleepy}} {{> cats/cat-block sleep=true}} {{/unless}} {{/each}}
 </ul>
 
-<h2>Cats that are sleepy!</h2>
+<h2>User Login:</h2>
 
 <ul>
   {{#each cats}} {{#if sleepy}} {{> cats/cat-block sleep=false}} {{/if}} {{/each}}
 </ul>
 
-<h2>Add a Cat</h2>
+<h2>Add a User</h2>
 <form class="create-form">
 
   <div class="form-group">
-    <label for="ca">Cat Name:</label>
+    <label for="ca">User Name:</label>
     <input type="text" id="ca" name="name">
   </div>
 
@@ -28,7 +28,7 @@
     <input type="radio" name="sleepy" value="0"> Awake
   </div>
 
-  <button type="submit">Add Cat</button>
+  <button type="submit">Add User</button>
 </form>
 
 
