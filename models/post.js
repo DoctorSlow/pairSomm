@@ -8,7 +8,7 @@ module.exports = function (sequelize, DataTypes) {
       }
     },
     item2: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1]
@@ -16,7 +16,11 @@ module.exports = function (sequelize, DataTypes) {
     },
     hashtag: {
       type: DataTypes.STRING,
-      defaultValue: "Personal"
+      allowNull: false,
+      defaultValue: "Personal",
+      validate: {
+        len: [1]
+      }
     },
     upvotes: {
       type: DataTypes.INTEGER,
@@ -27,5 +31,12 @@ module.exports = function (sequelize, DataTypes) {
       defaultValue: 0,
     }
   });
+  Post.associate = function (models) {
+    Post.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
   return Post;
 };
