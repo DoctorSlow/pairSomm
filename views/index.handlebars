@@ -1,35 +1,19 @@
-<h1>pairSomm!</h1>
-
-<h2>the sommelier of things!</h2>
-
-<ul>
-  {{#each cats}} {{#unless sleepy}} {{> cats/cat-block sleep=true}} {{/unless}} {{/each}}
-</ul>
-
-<h2>User Login:</h2>
-
-<ul>
-  {{#each cats}} {{#if sleepy}} {{> cats/cat-block sleep=false}} {{/if}} {{/each}}
-</ul>
-
-<h2>Add a User</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">User Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
-
-  <div class="form-group">
-    <label for="sleepy">Sleepy?</label>
-    <br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!
-    <br>
-    <input type="radio" name="sleepy" value="0"> Awake
-  </div>
-
-  <button type="submit">Add User</button>
-</form>
-
-
-{{!-- research how to exclude layout for user signup page --}}
+<div class="jumbotron">
+  <h1 class="display-4">pairSomm</h1>
+  <h2>the sommelier of things!</h2>
+  <form>
+    <div class="form-group">
+      <h3>Log in to Your Account</h3>
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+  </form>
+  <a class="btn btn-primary btn-lg" href="/" role="button">Log In</a>
+  <a class="btn btn-success btn-md" href="/register" role="button">or Register for an Account</a>
+  </p>
+</div>
