@@ -1,23 +1,42 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
   var Post = sequelize.define("Post", {
-    title: {
+    item1: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1]
       }
     },
-    body: {
-      type: DataTypes.TEXT,
+    item2: {
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1]
       }
     },
-    category: {
+    hashtag: {
       type: DataTypes.STRING,
-      defaultValue: "Personal"
+      allowNull: false,
+      defaultValue: "Personal",
+      validate: {
+        len: [1]
+      }
+    },
+    upvotes: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+    },
+    downvotes: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
     }
   });
+  Post.associate = function (models) {
+    Post.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
   return Post;
 };
