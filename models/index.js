@@ -5,6 +5,15 @@ var path = require("path");
 var Sequelize = require("sequelize");
 var env = process.env.NODE_ENV || "development";
 var config = require(path.join(__dirname, '..', 'config', 'config.json'))[env];
+
+if (env === 'production') {
+  config.database = process.env.JAWS_DB;
+  config.username = process.env.JAWS_USER;
+  config.password = process.env.JAWS_PASS;
+  config.port = process.env.JAWS_PORT;
+  config.host = process.env.JAWS_HOST;
+}
+
 var sequelize = new Sequelize(config.database, config.username, config.password, config);
 var db = {};
 
