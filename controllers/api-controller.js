@@ -49,7 +49,7 @@ module.exports = function (app) {
     console.log(req.body);
     db.Post.create({
       item1: req.body.firstlink,
-      item2: req.body.laslink,
+      item2: req.body.lastlink,
       hashtag: req.body.hashtag,
       UserId: req.user.id
     })
