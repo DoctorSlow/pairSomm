@@ -1,13 +1,14 @@
-$(".btn-danger").attr ("onclick","downvote()"); 
-$(".btn-success").attr ("onclick","upvote()"); 
-app.put("/api/posts", function(req, res) {
-  db.Post.update(req.body,
-    {
-      where: {
-        id: req.body.id
-      }
-    })
-    .then(function(userdb) {
-      res.json(userdb);
-    });
+var counter = 0;
+
+$(".btn-success").click(function(){
+  counter++;
+  $(".vote-count1").text(counter);
 });
+
+$(".btn-danger").click(function(){
+  counter--;    
+  $(".vote-count2").text(counter);
+  then(function(userdb) {
+    res.json(userdb);
+  });
+});  

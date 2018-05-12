@@ -1,10 +1,9 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
-    "database": "user_db",
+    "password": "Tanzania24",
+    "database": "userdb",
     "host": "localhost",
-    "port": 8889,
     "dialect": "mysql"
   },
   "test": {
