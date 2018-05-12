@@ -4,7 +4,6 @@
     "password": "root",
     "database": "user_db",
     "host": "localhost",
-    "port": 8889,
     "dialect": "mysql"
   },
   "test": {
