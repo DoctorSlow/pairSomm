@@ -1,19 +1,21 @@
-<h2>Pair Post</h2>
-
-<div class="card" style="max-width: 202px;">
-    <form>
-        First Link:
-        <br>
-        <input type="text" name="firstlink">
-        <!-- Image -->
-        <img class="card-img-top" src="/pix/samples/12s.jpg" alt="Photo of sunset">
-        <br> Second Link:
-        <br>
-        <input type="text" name="lastlink">
-        <!-- Image -->
-        <img class="card-img-bottom" src="/pix/samples/12s.jpg" alt="Photo of sunset">
-        <br> Hashtag:
-        <br>
-        <input type="text" name="hashtag">
-    </form>
+<div class="jumbotron">
+    <h1 class="display-4">Pair Post!</h1>
+    <form action="/register" method="post">
+        <div class="form-group">
+            <h3>Enter an image link for your first item</h3>
+            <label for="exampleInputLink1">Image link 1</label>
+            <input type="link1" class="form-control" name="link1" aria-describedby="linkHelp" placeholder="Enter image link 1">
+        </div>
+        <div class="form-group">
+            <h3>Enter an image link for your second item</h3>
+            <label for="exampleInputLink2">Image link 2</label>
+            <input type="link2" class="form-control" name="link2" aria-describedby="linkHelp" placeholder="Enter image link 2">
+        </div>
+        <div class="form-group">
+            <h3>Enter hashtags for your pairing here</h3>
+            <label for="exampleInputHashtags">Pairing Hashtags</label>
+            <input type="hashtags" class="form-control" name="hashtags" placeholder="Enter at least one, but no more than 10 hashtags for this pairing">
+        </div>
 </div>
+
+<script src="/assets/js/post.js"></script>
