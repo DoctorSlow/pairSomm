@@ -4,6 +4,10 @@
     "password": "Tanzania24",
     "database": "userdb",
     "host": "localhost",
+<<<<<<< HEAD
+=======
+    "port": 3306,
+>>>>>>> dc50d24c4e67a340fe5ef2cc13e288c2ec521343
     "dialect": "mysql"
   },
   "test": {
