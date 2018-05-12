@@ -28,8 +28,6 @@ module.exports = function (passport, user) {
 
 
         function (req, username, password, done) {
-            console.log(username);
-            console.log(password);
             //	passReqToCallback: true // allows us to pass back the entire request to the callback
 
             var generateHash = function (password) {
