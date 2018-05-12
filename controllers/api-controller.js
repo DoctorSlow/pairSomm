@@ -32,17 +32,17 @@ module.exports = function (app) {
   //     });
   // });
 
-  // Get route for retrieving a single post
-  // app.get("/api/posts/:id", function (req, res) {
-  //   db.Post.findOne({
-  //     where: {
-  //       id: req.params.id
-  //     }
-  //   })
-  //     .then(function (dbPost) {
-  //       res.json(dbPost);
-  //     });
-  // });
+  //Get route for retrieving a single post
+  app.get("/api/posts/:id", function (req, res) {
+    db.Post.findOne({
+      where: {
+        id: req.params.id
+      }
+    })
+      .then(function (userdb) {
+        res.json(userdb);
+      });
+  });
 
   // POST route for saving a new post
   app.post("/post", function (req, res) {
@@ -71,15 +71,15 @@ module.exports = function (app) {
   // });
 
   // PUT route for updating posts
-  //   app.put("/api/posts", function (req, res) {
-  //     db.Post.update(req.body,
-  //       {
-  //         where: {
-  //           id: req.body.id
-  //         }
-  //       })
-  //       .then(function (dbPost) {
-  //         res.json(dbPost);
-  //       });
-  //   });
+  app.put("/api/posts", function (req, res) {
+    db.Post.update(req.body,
+      {
+        where: {
+          id: req.body.id
+        }
+      })
+      .then(function (userdb) {
+        res.json(userdb);
+      });
+  });
 };
