@@ -1,0 +1,1 @@
+//GET all posts belonging to this user
