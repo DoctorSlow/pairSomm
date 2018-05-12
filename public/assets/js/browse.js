@@ -1,0 +1,1 @@
+//GET data from db, establish UPDATE for voting

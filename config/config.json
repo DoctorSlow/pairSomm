@@ -1,9 +1,9 @@
 {
   "development": {
     "username": "root",
-    "password": "rootR00t",
-    "database": "blogger",
-    "host": "127.0.0.1",
+    "password": "Tanzania24",
+    "database": "userdb",
+    "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
