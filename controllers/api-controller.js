@@ -57,7 +57,30 @@ module.exports = function (app) {
         res.json(userdb);
       });
   });
+  app.put("/post/down", function (req, res) {
+    db.Post.update(req.body,
+      {
+        where: {
+          id: req.body.id
 
+        }
+      })
+      .then(function (userdb) {
+        res.json(userdb);
+      });
+  });
+  app.put("/post/up", function (req, res) {
+    db.Post.update(req.body,
+      {
+        where: {
+          id: req.body.id
+
+        }
+      })
+      .then(function (userdb) {
+        res.json(userdb);
+      });
+  });
   // DELETE route for deleting posts
   // app.delete("/api/posts/:id", function (req, res) {
   //   db.Post.destroy({
