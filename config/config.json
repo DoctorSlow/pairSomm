@@ -1,10 +1,13 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
-    "database": "user_db",
+    "password": "Tanzania24",
+    "database": "userdb",
     "host": "localhost",
-    "port": 8889,
+<<<<<<< HEAD
+=======
+    "port": 3306,
+>>>>>>> dc50d24c4e67a340fe5ef2cc13e288c2ec521343
     "dialect": "mysql"
   },
   "test": {
@@ -15,10 +18,7 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
 }

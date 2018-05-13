@@ -177,5 +177,105 @@
 	
 	</div>	
 </div> 
+------------------------------------------------- 
 <button type="button" class="btn btn-success">⇈</button>
 <button type="button" class="btn btn-danger">⇊</button>
+-------------------------------------------------- 
+
+<div class="container-fluid" "content-row"> 
+  <div class="card-block text-center"
+      <div class="card-body">
+<h5 class="card-title">Image 1</h5> 
+<form class="myform">
+  <p class="vote-count">0</p>
+  <button type="button" class="btn btn-success"
+          class="vote-btn" 
+          data-default-text="⇈"
+          data-alt-text="PAIR VOTE!">
+    <span class="icon"></span> <span class="text">⇈</span>
+  </button> <p class="vote-count">0</p>
+  <button type="button" class="btn btn-danger"
+          class="vote-btn" 
+          data-default-text="⇊"
+          data-alt-text="PAIR VOTE!">
+    <span class="icon"></span> <span class="text">⇊</span>
+  </button>
+</form>
+        <p class="card-text"></p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFSqhHtfOKhIipBzCk2wl-AhW1yfsW7DekO1aDCOEYVTAkCsVdKw" class="btn btn-primary"></img>
+      </div>
+    </div>
+  </div> 
+  </div> 
+  <div class="container-fluid" "content-row"> 
+    <div class="card-block text-center">
+      <div class="card-body">
+        <h5 class="card-title">Image 2</h5>
+        <form class="myform"><p class="vote-count">0</p>
+        <button type="button" class="btn btn-success">⇈</button>
+         <div class="vote-btn" 
+          data-default-text="⇈"
+          data-alt-text="PAIR VOTE!">
+          <span class="icon"></span> <span class="text"></span>
+   <p class="vote-count">0</p>
+   <button type="button" class="btn btn-danger">⇊</button>
+          <div class="vote-btn" 
+          data-default-text="⇊"
+          data-alt-text="PAIR VOTE!"><span class="icon"></span> <span class="text"></span>
+</form>
+        <p class="card-text"></p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqvY9NEJVv6isHE_PVqsyu7DANMdbx75jmNsNvRREHi3jXaMyrvg" class="btn btn-primary"></img>
+      </div>
+    </div>
+  </div>
+</div> 
+<div class="card text-center">
+    <div class="card-body"> 
+        <h5 class="card-title">Tags</h5> 
+        <p class="card-text">#butter #baconbutter #butteryfriends #slipnslide #funinthesun #healthyfats #lube</p>
+        <i class="fas fa-angle-double-down" class="float-sm-right"></i>
+    </div>
+</div> 
+----------------------------------- 
+<--////GET data from db, establish UPDATE for voting 
+var VoteWidget= {
+    settings: {
+      $counter: $('.vote-count'),
+      $btn:     $('.myform button'),
+    },
+  init: function() {
+    VoteWidget.bind();
+  },
+    bind: function() {
+      VoteWidget.settings.$btn.click(function(){
+        if (! $(this).hasClass('complete')) {
+              VoteWidget.bumpCount();
+        }
+        $(this).toggleClass('complete');
+        VoteWidget.toggleText();  
+  
+      return true;
+    });
+    },
+    bumpCount: function() {
+      var current_count = $('.vote-count').text();
+      count = parseInt(current_count);
+      count++;
+      VoteWidget.settings.$counter.toggleClass('bumped').text(count);
+    },
+    toggleText: function(){
+      var $text_container = $('.myform button .text');
+      var alt_text = VoteWidget.settings.$btn.data('alt-text');
+      var default_text = VoteWidget.settings.$btn.data('default-text');
+      var current_text = $text_container.text();
+      console.log('current is ' + current_text);
+      if ( current_text == default_text ) {
+        $text_container.text(alt_text)
+      } else {
+        $text_container.text(default_text)
+      }
+    }
+  }
+  
+  
+  VoteWidget.init(); -->
