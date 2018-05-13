@@ -24,13 +24,6 @@ var db = require("./models");
 
 
 
-
-//handlebars initialized here.
-// app.engine("handlebars", exphbs({
-//   defaultLayout: "main"
-// }));
-// app.set("view engine", "handlebars");
-
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({
   extended: true
@@ -70,7 +63,7 @@ app.get('/', function (req, res) {
 // =============================================================
 require('./routes/auth.js')(app, passport);
 require("./controllers/api-controller.js")(app);
-require("./controllers/html-controller.js")(app);// Syncing our sequelize models and then starting our Express app
+require("./controllers/html-controller.js")(app); // Syncing our sequelize models and then starting our Express app
 // =============================================================
 //Paspport strategy
 require('./config/passport/passport.js')(passport, db.User);
