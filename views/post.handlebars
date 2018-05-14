@@ -2,20 +2,20 @@
     <h1 class="display-4">pairSomm Pair-Post!</h1>
     <h2>Post your own perfect pairing here</h2>
     <br>
-    <form action="/register" method="post">
+    <form action="/post" method="POST">
         <div class="form-group">
             <h3>Image 1 Link</h3>
-            <input type="link1" class="form-control" name="link1" aria-describedby="linkHelp" placeholder="Enter an image link for the first item here">
+            <input type="link1" class="form-control" name="firstlink" aria-describedby="linkHelp" placeholder="Enter an image link for the first item here">
         </div>
         <div class="form-group">
             <h3>Image 2 Link</h3>
-            <input type="link2" class="form-control" name="link2" aria-describedby="linkHelp" placeholder="Enter an image link for the second item here">
+            <input type="link2" class="form-control" name="lastlink" aria-describedby="linkHelp" placeholder="Enter an image link for the second item here">
         </div>
         <div class="form-group">
             <h3>Pairing Hashtags</h3>
-            <input type="hashtags" class="form-control" name="hashtags" placeholder="Enter at least one, but no more than 10 #hashtags for this pairing here">
+            <input type="hashtags" class="form-control" name="hashtag" placeholder="Enter at least one, but no more than 10 #hashtags for this pairing here">
         </div>
-        <button type="button" class="btn btn-primary btn-lg" class="post-btn" data-default-text="fab fa-pied-piper-pp" data-alt-text="pair-post">
+        <button type="submit" class="btn btn-primary btn-lg" class="post-btn" data-default-text="fab fa-pied-piper-pp" data-alt-text="pair-post">
             <span>Pair-Post!</span>
             <span class="icon"></span>
             <i class="fab fa-pied-piper-pp"></i>
