@@ -54,7 +54,7 @@ module.exports = function (app) {
       UserId: req.user.id
     })
       .then(function (userdb) {
-        res.json(userdb);
+        res.redirect("/browse");
       });
   });
   app.put("/post/down", function (req, res) {

@@ -4,15 +4,15 @@
     <br>
     <form action="/post" method="POST">
         <div class="form-group">
-            <h3>Image 1 Link</h3>
+            <label for="firstlink" class="text">Image 1 Link</label>
             <input type="link1" class="form-control" name="firstlink" aria-describedby="linkHelp" placeholder="Enter an image link for the first item here">
         </div>
         <div class="form-group">
-            <h3>Image 2 Link</h3>
+            <label for="lastlink" class="text">Image 2 Link</label>
             <input type="link2" class="form-control" name="lastlink" aria-describedby="linkHelp" placeholder="Enter an image link for the second item here">
         </div>
         <div class="form-group">
-            <h3>Pairing Hashtags</h3>
+            <label for="hashtag" class="text">Pairing #Hashtags</label>
             <input type="hashtags" class="form-control" name="hashtag" placeholder="Enter at least one, but no more than 10 #hashtags for this pairing here">
         </div>
         <button type="submit" class="btn btn-primary btn-lg" class="post-btn" data-default-text="fab fa-pied-piper-pp" data-alt-text="pair-post">
@@ -21,5 +21,9 @@
             <i class="fab fa-pied-piper-pp"></i>
         </button>
 </div>
+<br>
+<br>
+<br>
+<br>
 
 <script src="/assets/js/post.js"></script>
