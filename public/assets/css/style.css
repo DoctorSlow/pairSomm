@@ -2,3 +2,53 @@
 .card-deck {
     margin: 10px;
 }
+
+h1,
+h2,
+h3,
+h4,
+.h1,
+.card-header,
+.card-text {
+    /* typewritery */
+    font-family: 'Special Elite', cursive;
+    color: white;
+}
+
+.form-control,
+.text {
+    /* clean simple, but funky for headers */
+    font-family: 'Life Savers', cursive;
+    color: white;
+}
+
+.navbar,
+.navbar-brand {
+    background-color: #660033;
+    /* cursive swoopy for font w/ logo */
+    font-family: 'Tangerine', cursive;
+    color: white;
+    font-size: 1.3em;
+}
+
+html,
+body,
+.card,
+.jumbotron,
+.modal-body {
+    background-color: #CC6600;
+}
+
+.card-header,
+.modal-header,
+.modal-footer,
+.special1 {
+    background-color: #993300;
+    color: white;
+}
+
+/* color scheme:
+burgundy: 660033
+wine-red: 990033
+orangish-brown: 993300
+light orange: CC6600 */
