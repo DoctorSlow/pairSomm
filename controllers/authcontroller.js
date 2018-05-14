@@ -4,7 +4,9 @@ var exports = module.exports = {}
 
 exports.signup = function (req, res) {
 
-    res.render('register');
+    res.render('register', {
+        layout: "login"
+    });
 
 }
 exports.login = function (req, res) {
@@ -14,6 +16,7 @@ exports.login = function (req, res) {
     });
 
 }
+
 
 exports.browse = function (req, res) {
 
