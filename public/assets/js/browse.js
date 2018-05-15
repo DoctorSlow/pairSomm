@@ -1,17 +1,21 @@
 //GET data from db, establish UPDATE for voting
+$(document).ready(function () {
+    $.get("/post/:id", function (data) {
+        alert("Data: " + data);
+    });
+
+});
 $(".btn-danger").attr("onclick", "downvote()");
 $(".btn-success").attr("onclick", "upvote()");
-function downvote(todo) {
+function downvote() {
     $.ajax({
         method: "PUT",
-        url: "/post/down",
-        data: todo
-    }).then(getTodos);
+        url: "/post/down"
+    }).then(downvotes);
 }
-function upvote(todo) {
+function upvote() {
     $.ajax({
         method: "PUT",
-        url: "/post/up",
-        data: todo
-    }).then(getTodos);
+        url: "/post/up"
+    }).then(upvotes);
 }
