@@ -5,14 +5,16 @@ $(document).ready(function () {
     });
 
 });
-$(".btn-danger").attr("onclick", "downvote()");
-$(".btn-success").attr("onclick", "upvote()");
+$(".button-down").attr("onclick", "downvote()");
+$(".button-up").attr("onclick", "upvote()");
+
 function downvote() {
     $.ajax({
         method: "PUT",
         url: "/post/down"
     }).then(downvotes);
 }
+
 function upvote() {
     $.ajax({
         method: "PUT",
