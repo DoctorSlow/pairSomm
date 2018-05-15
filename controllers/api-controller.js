@@ -24,7 +24,7 @@ module.exports = function (app) {
   app.get("/post/:id", function (req, res) {
     db.Post.findOne({
       where: {
-        id: req.params.id
+        id: 1
       }
     })
       .then(function (userdb) {
