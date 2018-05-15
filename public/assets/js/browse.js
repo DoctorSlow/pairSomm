@@ -1,6 +1,6 @@
 //GET data from db, establish UPDATE for voting
 $(document).ready(function () {
-    $.get("/post:id", function (data) {
+    $.get("/post/:id", function (data) {
         alert("Data: " + data);
     });
 
