@@ -12,11 +12,11 @@ $(document).ready(function () {
         console.log(hashtag);
         console.log(ups);
         console.log(downs);
-        $("image1").text = firstlink;
-        $("image2").text = secondlink;
-        $("hashtags").text = hashtag;
-        $("vote-count1").val = ups;
-        $("vote-count2").val = downs;
+        $("#image1").attr("src", firstlink);
+        $("#image2").attr("src", secondlink);
+        $("#hashtags").text(hashtag);
+        $("#vote-count1").val(ups);
+        $("#vote-count2").val(downs);
     });
 
 });
