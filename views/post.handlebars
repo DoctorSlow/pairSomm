@@ -1,10 +1,10 @@
 <div class="jumbotron">
     <h1 class="display-4">pairSomm Pair-Post!</h1>
-    <h2>Post your own perfect pairing here</h2>
+    <h2 class="subtitle">Post your own perfect pairing here</h2>
     <br>
     <form action="/post" method="POST">
         <div class="form-group">
-            <label for="firstlink" class="text">Image 1 Link</label>
+            <label for="firstlink" class="text">Image 1 Link (Pro-Pairing Tip: use similarly sized/oriented images for best results)</label>
             <input type="link1" class="form-control" name="firstlink" aria-describedby="linkHelp" placeholder="Enter an image link for the first item here">
         </div>
         <div class="form-group">
@@ -15,11 +15,37 @@
             <label for="hashtag" class="text">Pairing #Hashtags</label>
             <input type="hashtags" class="form-control" name="hashtag" placeholder="Enter at least one, but no more than 10 #hashtags for this pairing here">
         </div>
-        <button type="submit" class="btn btn-primary btn-lg" class="post-btn" data-default-text="fab fa-pied-piper-pp" data-alt-text="pair-post">
+        <button type="submit" class="btn button-post btn-lg" class="post-btn" data-alt-text="pair-post" href="#postModal" data-toggle="modal"
+            data-target="#myModal">
             <span>Pair-Post!</span>
-            <span class="icon"></span>
-            <i class="fab fa-pied-piper-pp"></i>
         </button>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <center>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                            <h4 class="modal-title" id="myModalLabel">Pair-Post Status</h4>
+                        </center>
+                    </div>
+                    <div class="modal-body">
+                        <center>
+                            <img src="https://www.ellsworthamerican.com/wp-content/uploads/sites/4/2016/10/wine_2805426b.jpg" name="cheers" width="240"
+                                height="240" class="rounded-circle">
+                            <h3 class="media-heading">Cheers! Your Pair-Post Was a Success!
+                            </h3>
+                        </center>
+                    </div>
+                    <div class="modal-footer">
+                        <center>
+                            <button type="button" class="btn button-accept" data-dismiss="modal">Dismiss</button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 </div>
 <br>
 <br>

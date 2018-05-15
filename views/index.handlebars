@@ -1,6 +1,15 @@
-<div class="jumbotron">
-  <h1 class="display-4">pairSomm</h1>
-  <h2>the sommelier of things!</h2>
+<div class="jumbotron jumbotron-login">
+  <div class="card text-center special2 border-0">
+    <center>
+      <img class="card-image" src="assets/img/pairSomm.png" alt="pairSomm Logo" width="429" height="166">
+    </center>
+    <div class="card-footer card-footer-logo text-center border-0">
+      <h3 class="logo1">"the sommelier of things!"
+      </h3>
+      <br>
+      <h4 class="logo2"> -- a pairing app that drives discovery of new experiences via user-generated combinations -- </h4>
+    </div>
+  </div>
   <br>
   <form action="/login" method="POST">
     <div class="form-group">
@@ -14,10 +23,10 @@
       <label for="password" class="text">Password</label>
       <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
     </div>
-    <input class="btn btn-primary btn-lg" type="submit" value="Log In!">
+    <button class="btn button-yes btn-lg" type="submit">Log In!</button>
   </form>
   <br>
-  <a class="btn btn-success btn-md" href="/register" role="button">or Register for an Account</a>
+  <a class="btn button-confirm btn-md" href="/register" role="button">or Register for an Account</a>
   </p>
 </div>
 <br>

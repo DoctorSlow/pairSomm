@@ -3,6 +3,14 @@
     margin: 10px;
 }
 
+#profile-pic {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* .card-image {   
+} */
+
 h1,
 h2,
 h3,
@@ -16,7 +24,9 @@ h4,
 }
 
 .form-control,
-.text {
+.text,
+button,
+.button-confirm {
     /* clean simple, but funky for headers */
     font-family: 'Life Savers', cursive;
     color: white;
@@ -31,20 +41,68 @@ h4,
     font-size: 1.3em;
 }
 
-html,
 body,
 .card,
 .jumbotron,
 .modal-body {
+    background-color: rgb(197, 149, 101);
+}
+
+.subtitle {
+    color: #993300;
+}
+
+.card-profile {
     background-color: #CC6600;
 }
 
 .card-header,
-.modal-header,
-.modal-footer,
-.special1 {
+.modal-header {
+    background-color: #CC6600;
+}
+
+.card-footer,
+.modal-footer {
+    background-color: #CC6600;
+}
+
+.card-footer-logo {
+    background-color: rgb(197, 149, 101);
+}
+
+.logo1 {
+    color: #990033;
+}
+
+.logo2 {
+    color: #993300;
+    font-family: 'Life Savers', cursive;
+}
+
+.jumbotron-login {
+    padding-top: 20px;
+}
+
+.button-up {
+    background-color: #994a23;
+}
+
+.button-down {
+    background-color: #972a4e;
+}
+
+.button-confirm {
     background-color: #993300;
     color: white;
+}
+
+.button-post,
+.button-yes {
+    background-color: #CC6600;
+}
+
+.button-accept {
+    background-color: #990033;
 }
 
 /* color scheme:

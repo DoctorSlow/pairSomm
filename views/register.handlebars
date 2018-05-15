@@ -1,6 +1,16 @@
-<div class="jumbotron">
-    <h1 class="display-4">pairSomm</h1>
-    <h2>the sommelier of things!</h2>
+<div class="jumbotron jumbotron-login">
+    <div class="card text-center special2 border-0">
+        <center>
+            <img class="card-image" src="assets/img/pairSomm.png" alt="pairSomm Logo" width="429" height="166">
+        </center>
+        <div class="card-footer card-footer-logo text-center border-0">
+            <h3 class="logo1">
+                <em>"the sommelier of things!"</em>
+            </h3>
+            <br>
+            <h4 class="logo2"> -- a pairing app that drives discovery of new experiences via user-generated combinations -- </h4>
+        </div>
+    </div>
     <br>
     <form action="/register" method="post">
         <div class="form-group">
@@ -17,11 +27,12 @@
             <label for="exampleInputPassword1" class="text">Password</label>
             <input type="password" class="form-control" name="password" placeholder="Enter a password here">
         </div>
-        <button type="button" class="btn btn-secondary btn-lg" href="#termsModal" data-toggle="modal" data-target="#myModal">Accept Our Terms & Conditions</button>
-        <button href="/" class="btn btn-success btn-lg" id="button2" <input type="submit" value="button2" disabled>Create Account!</button>
+        <button type="button" class="btn button-accept btn-lg" href="#termsModal" data-toggle="modal" data-target="#myModal">Accept Our Terms & Conditions</button>
+
+        <button href="/" class="btn button-yes btn-lg" id="button2" <input type="submit" value="button2" disabled>Create Account!</button>
         <br>
         <br>
-        <button href="/login" class="btn btn-primary btn-sm" type="submit">Already have an account? Log in here!</button>
+        <button href="/login" class="btn button-confirm btn-sm" type="submit">Already have an account? Log in here!</button>
     </form>
 
     <!-- Modal -->
@@ -325,7 +336,7 @@
 
                 </div>
                 <div class="modal-footer" style="text-align:center">
-                    <button type="submit" id="button1" class="btn btn-success btn-lg" data-dismiss="modal" <input value="button1" onclick="enableButton2()">Accept</button>
+                    <button type="submit" id="button1" class="btn button-accept btn-lg" data-dismiss="modal" <input value="button1" onclick="enableButton2()">Accept</button>
                 </div>
             </div>
         </div>
