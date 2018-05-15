@@ -34,7 +34,7 @@ module.exports = function (app) {
     res.render("post");
   });
   //route to browse page
-  app.get("/browse/1", function (req, res) {
+  app.get("/browse", function (req, res) {
     res.render("browse");
   });
 
