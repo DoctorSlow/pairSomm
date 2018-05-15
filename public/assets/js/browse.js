@@ -1,7 +1,17 @@
 //GET data from db, establish UPDATE for voting
 $(document).ready(function () {
     $.get("/post/:id", function (data) {
-        alert("Data: " + data);
+        alert("Data: " + data.hashtag);
+        var firstlink = data.item1;
+        var secondlink = data.item2;
+        var hashtag = data.hashtag;
+        var ups = data.upvotes;
+        var downs = data.downvotes;
+        console.log(firstlink);
+        console.log(secondlink);
+        console.log(hashtag);
+        console.log(ups);
+        console.log(downs);
     });
 
 });
