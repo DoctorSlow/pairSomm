@@ -56,24 +56,14 @@ module.exports = function (app) {
       });
   });
   app.put("/post/down", function (req, res) {
-    db.Post.update({ downvotes: sequelize.col('downvotes') + 1 }, {
-
-      where: {
-        id: req.body.downvotes
-
-      }
-    })
-      .then(function (userdb) {
-        res.json(userdb);
-      });
-  });
+    db.Post.findById(1).then(downvotes => {
+      return downvotes.increment('downvotes', { by: 1 })
+    }).then(downvotes => { })
+  })
   app.put("/post/up", function (req, res) {
     db.Post.findById(1).then(upvotes => {
       return upvotes.increment('upvotes', { by: 1 })
     }).then(upvotes => { })
-    // where: {
-    //   id: req.body.upvotes
-    // }
   })
   //     .then(function (userdb) {
   //       res.json(userdb);
