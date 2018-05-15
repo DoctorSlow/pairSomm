@@ -6,8 +6,6 @@ module.exports = function (app, passport) {
     app.use(flash());
 
 
-
-
     app.get('/register', authController.signup);
 
 
@@ -15,12 +13,12 @@ module.exports = function (app, passport) {
 
 
     app.post('/register', passport.authenticate('local', {
-        successRedirect: '/browse',
+            successRedirect: '/browse',
 
-        failureRedirect: '/register',
+            failureRedirect: '/register',
 
-        failureFlash: true
-    }
+            failureFlash: true
+        }
 
     ));
     app.get('/browse', isLoggedIn, authController.browse);
@@ -32,15 +30,12 @@ module.exports = function (app, passport) {
     app.get('/logout', authController.logout);
 
     app.post('/login', passport.authenticate('local-signin', {
-        successRedirect: '/browse',
+            successRedirect: '/browse',
 
-        failureRedirect: '/'
-    }
+            failureRedirect: '/'
+        }
 
     ));
-
-
-
 
     function isLoggedIn(req, res, next) {
 
@@ -51,7 +46,4 @@ module.exports = function (app, passport) {
         res.redirect('/signin');
 
     }
-
-
-
 }
