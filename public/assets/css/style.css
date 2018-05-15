@@ -105,6 +105,11 @@ body,
     background-color: #990033;
 }
 
+.vote-btn {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 /* color scheme:
 burgundy: 660033
 wine-red: 990033
