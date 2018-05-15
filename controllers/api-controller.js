@@ -33,16 +33,17 @@ module.exports = function (app) {
   // });
 
   // Get route for retrieving a single post
-  // app.get("/api/posts/:id", function (req, res) {
-  //   db.Post.findOne({
-  //     where: {
-  //       id: req.params.id
-  //     }
-  //   })
-  //     .then(function (dbPost) {
-  //       res.json(dbPost);
-  //     });
-  // });
+  app.get("/post/:id", function (req, res) {
+    db.Post.findOne({
+      where: {
+        id: req.params.id
+      }
+    })
+      .then(function (userdb) {
+        console.log(userdb);
+        res.json(userdb);
+      });
+  });
 
   // POST route for saving a new post
   app.post("/post", function (req, res) {
@@ -61,7 +62,7 @@ module.exports = function (app) {
     db.Post.update(req.body,
       {
         where: {
-          id: req.body.id
+          id: req.body.downvotes++
 
         }
       })
@@ -73,7 +74,7 @@ module.exports = function (app) {
     db.Post.update(req.body,
       {
         where: {
-          id: req.body.id
+          id: req.body.upvotes++
 
         }
       })
