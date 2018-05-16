@@ -53,4 +53,4 @@ function hideVote1() {
             } else {
                 x.style.display = "none";
             }
-        } 
+        }; 
