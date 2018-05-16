@@ -20,6 +20,28 @@ $(document).ready(function () {
     });
 
 });
+// $(document).ready(function () {
+//     var myvar = Math.floor(Math.random() * 10) + 1;
+//     $.get("/browse/1/", function (data) {
+
+//         var firstlink = data.item1;
+//         var secondlink = data.item2;
+//         var hashtag = data.hashtag;
+//         var ups = data.upvotes;
+//         var downs = data.downvotes;
+//         console.log(firstlink);
+//         console.log(secondlink);
+//         console.log(hashtag);
+//         console.log(ups);
+//         console.log(downs);
+//         $("#image1").attr("src", firstlink);
+//         $("#image2").attr("src", secondlink);
+//         $("#hashtags").text(hashtag);
+//         $("#vote-count1").text(ups);
+//         $("#vote-count2").text(downs);
+//     });
+
+// });
 $(".button-down").attr("onclick", "downvote()");
 $(".button-up").attr("onclick", "upvote()");
 
@@ -27,12 +49,24 @@ function downvote() {
     $.ajax({
         method: "PUT",
         url: "/post/down"
-    }).then(downvotes);
+    }).fail(function () {
+
+    })
+        .done(function () {
+            redirect();
+        });
 }
 
 function upvote() {
     $.ajax({
         method: "PUT",
         url: "/post/up"
-    }).then(upvotes);
+    }).fail(function () {
+
+    }).done(function () {
+        redirect();
+    });
+}
+function redirect() {
+    location.reload();  //Refresh page
 }

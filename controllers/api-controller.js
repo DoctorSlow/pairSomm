@@ -32,16 +32,15 @@ module.exports = function (app) {
       });
   });
   // Get route for retrieving a single post
-  // app.get("/browse/:id", function (req, res) {
-  //   db.Post.findOne({
-  //     where: {
-  //       id: req.params.id
-  //     }
-  //   })
-  //     .then(function (userdb) {
-  //       res.redirect("/browse/:id");
-  //     });
-  // });
+  app.get("/browse/:id", function (req, res) {
+    db.Post.findOne({
+      where: {
+        id: req.params.id || 1
+      }
+    }).then(function (userdb) {
+      res.json(userdb);
+    });
+  });
   // POST route for saving a new post
   app.post("/post", function (req, res) {
     console.log(req.body);
@@ -58,12 +57,12 @@ module.exports = function (app) {
   app.put("/post/down", function (req, res) {
     db.Post.findById(1).then(downvotes => {
       return downvotes.increment('downvotes', { by: 1 })
-    }).then(downvotes => { })
+    }).then(downvotes => { res.send() })
   })
   app.put("/post/up", function (req, res) {
     db.Post.findById(1).then(upvotes => {
       return upvotes.increment('upvotes', { by: 1 })
-    }).then(upvotes => { })
+    }).then(upvotes => { res.send() })
   })
   //     .then(function (userdb) {
   //       res.json(userdb);
