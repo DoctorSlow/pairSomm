@@ -35,4 +35,22 @@ function upvote() {
         method: "PUT",
         url: "/post/up"
     }).then(upvotes);
-}
+}; 
+
+function hideVote1() {
+        var x = document.getElementById("vote-count1");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }; 
+
+    function hideVote2() {
+            var x = document.getElementById("vote-count2");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        } 

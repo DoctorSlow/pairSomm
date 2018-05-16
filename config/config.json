@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "temp",
+    "password": "Tanzania24",
     "database": "userdb",
     "host": "localhost",
     "dialect": "mysql"
